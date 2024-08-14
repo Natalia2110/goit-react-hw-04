@@ -19,10 +19,10 @@ function App() {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [modalImage, setModalImage] = useState(null);
 
-  const notify = () =>
-    toast.error("Введіть текст для пошуку зображень", {
-      duration: 2000,
-    });
+  // const notify = () =>
+  //   toast.error("Введіть текст для пошуку зображень", {
+  //     duration: 2000,
+  //   });
 
   const handleSearch = (value) => {
     setImages([]);
@@ -94,7 +94,7 @@ function App() {
 
   return (
     <div className={css.container}>
-      <SearchBar onSubmit={handleSearch} onClick={notify} />
+      <SearchBar onSubmit={handleSearch} />
       {searchValue === "" && <Toaster />}
 
       {Array.isArray(images) && images.length !== 0 && (
