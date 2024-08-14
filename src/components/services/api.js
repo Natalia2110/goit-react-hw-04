@@ -5,7 +5,7 @@ const requestImg = async (searchValue, page) => {
   const url = `https://api.unsplash.com/search/photos/?page=${page}&per_page=12&client_id=${key}&query=${searchValue}`;
 
   const { data } = await axios.get(url);
-  console.log(url);
+  // console.log(url);
   return data;
 };
 

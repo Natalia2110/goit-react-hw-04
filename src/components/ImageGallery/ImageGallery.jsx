@@ -2,7 +2,7 @@ import React from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images, onClick }) => {
   return (
     <ul className={css["gallery-list"]}>
       {/* Набір елементів списку із зображеннями */}
@@ -10,7 +10,7 @@ const ImageGallery = ({ images }) => {
       {images.map((img) => {
         return (
           <li key={img.id} className={css["gallery-item"]}>
-            <ImageCard data={img} />
+            <ImageCard data={img} onClick={onClick} />
           </li>
         );
       })}
